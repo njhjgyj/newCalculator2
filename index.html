@@ -7,38 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <div class="history-div">
+    <div id="hamburger-id" class="hamburger-class" onclick="hamburger1()">&#x2630</div>
 
-        <div id="history-inner-div">
+    <div id="history-div-id" class="history-div">
 
-        <h3>HISTORY</h3>
+        <b id="hamburger-bold-tag" onclick="hamburger2()"> &#x2630 </b>
 
-        <p id="history-ptag">There's no history yet</p>
+        <div id="history-inner-div"> <br>
 
-        <ul id="ul-tag1" class="">
-            
-        </ul>
-        
+            <h3>HISTORY</h3>
+
+            <p id="history-ptag">There's no history yet</p>
+
+            <ul id="ul-tag1">
+
+            </ul>
+
         </div>
 
     </div>
 
-    <div class="display-div">
+    <div id="display-div-id" class="display-div">
 
-        <!-- <p id="display-ptag"></p> -->
         <input type="text" name="" id="input" disabled>
 
     </div><br><br>
 
-    <div class="buttons-div">
+    <div id="buttons-div-id" class="buttons-div">
 
         <button onclick="getBtnValue(event)">%</button>
         <button onclick="allClear()" title="All Clear">AC</button>
-        <button onclick="clear1()">CLEAR</button>
+        <button onclick="clear1()" class="clear-btn">CLEAR</button>
         <button onclick="getBtnValue(event)" title="&#247">/</button>
         <button onclick="getBtnValue(event)">7</button>
         <button onclick="getBtnValue(event)">8</button>
@@ -55,10 +59,11 @@
         <button onclick="getBtnValue(event)">0</button>
         <button onclick="getBtnValue(event)">.</button>
         <button onclick="equalBtn()">=</button>
-        
+
 
     </div>
 
 </body>
 <script src="app.js"></script>
+
 </html>
