@@ -123,13 +123,13 @@ function equalBtn() {
     let audio = new Audio("Click.mp3");
     audio.play();
     document.getElementById("input").value = eval(document.getElementById("input").value);
-
-    let getInp = document.getElementById("input");
-
-    let getInnerHistoryDiv = document.getElementById("history-inner-div");
-
+    
+    if (getUlTag.childElementCount > 15) {
+        getUlTag.replaceChildren("");
+        alert("Your history will be automatically clear because its reached its limit history limit is 16");
+    };
+    
     history();
-
 };
 
 
@@ -180,7 +180,30 @@ function deleteItem(e) {
 
     if (document.getElementById("lists-id") == null) {
         getPtag.innerHTML = "There's no history yet";
-        console.log(document.getElementById("There's no history yet"));
+        
     };
 
+};
+
+
+
+
+let getHistoryDiv = document.getElementById("history-div-id");
+let getDisplayDiv = document.getElementById("display-div-id");
+let getBtnDiv = document.getElementById("buttons-div-id");
+let getHamburgerBoldTag = document.getElementById("hamburger-bold-tag");
+
+function hamburger1() {
+
+    getHistoryDiv.classList.add("new-history-div-class");
+    getDisplayDiv.style.display = "none";
+    getBtnDiv.style.display = "none";
+    getHamburgerBoldTag.style.display = "block";
+};
+
+function hamburger2() {
+    getHistoryDiv.classList.remove("new-history-div-class");
+    getDisplayDiv.style.display = "block";
+    getBtnDiv.style.display = "block";
+    getHamburgerBoldTag.style.display = "none";
 };
